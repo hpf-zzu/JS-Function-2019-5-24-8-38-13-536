@@ -5,6 +5,16 @@
 ```
 function palindrome(message){
   // wirte your code here
+  var stack = [];
+				for(var i = message.length-1; i >= 0; i --){
+					stack.push(message[i]);
+				}
+				stack.join('');
+				for(var j = 0; j < stack.length; j ++){
+					if (message[j] != stack[j])
+						return false;
+				}
+				return true;
 }
 palindrome('hello'); // should return false
 palindrome('abcba'); // should return true
