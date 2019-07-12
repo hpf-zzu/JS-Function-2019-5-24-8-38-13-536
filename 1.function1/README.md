@@ -5,6 +5,11 @@
 ```
 function reverseString(message){
   // wirte your code here
+  var stack = [];
+				for(var len = message.length,i = len; i >= 0; i --){
+					stack.push(message[i]);
+				}
+				return stack.join('');
 }
 reverseString('hello'); // should return 'olleh'
 ```
